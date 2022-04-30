@@ -31,22 +31,22 @@ public final class RoaringArray implements Cloneable, Externalizable, Appendable
   static final int INITIAL_CAPACITY = 4;
 
 
-  char[] keys = null;
+  public char[] keys = null;
 
-  Container[] values = null;
+  public Container[] values = null;
 
   int size = 0;
 
-  protected RoaringArray() {
+  public RoaringArray() {
     this(INITIAL_CAPACITY);
   }
 
-  RoaringArray(int initialCapacity) {
+  public RoaringArray(int initialCapacity) {
     this(new char[initialCapacity], new Container[initialCapacity], 0);
   }
 
 
-  RoaringArray(char[] keys, Container[] values, int size) {
+  public RoaringArray(char[] keys, Container[] values, int size) {
     this.keys = keys;
     this.values = values;
     this.size = size;
@@ -61,7 +61,7 @@ public final class RoaringArray implements Cloneable, Externalizable, Appendable
    * @return the smallest index greater than pos such that array[index].key is at least as large as
    *         min, or size if it is not possible.
    */
-  protected int advanceUntil(char x, int pos) {
+  public int advanceUntil(char x, int pos) {
     int lower = pos + 1;
 
     // special handling for a possibly common sequential case
@@ -213,7 +213,7 @@ public final class RoaringArray implements Cloneable, Externalizable, Appendable
    * @param startingIndex starting index in the other array
    * @param end endingIndex (exclusive) in the other array
    */
-  protected void append(RoaringArray sa, int startingIndex, int end) {
+  public void append(RoaringArray sa, int startingIndex, int end) {
     extendArray(end - startingIndex);
     for (int i = startingIndex; i < end; ++i) {
       this.keys[this.size] = sa.keys[i];
@@ -227,7 +227,7 @@ public final class RoaringArray implements Cloneable, Externalizable, Appendable
     return Util.unsignedBinarySearch(keys, begin, end, key);
   }
 
-  protected void clear() {
+  public void clear() {
     this.keys = null;
     this.values = null;
     this.size = 0;
@@ -664,7 +664,7 @@ public final class RoaringArray implements Cloneable, Externalizable, Appendable
   }
 
   // involves a binary search
-  protected Container getContainer(char x) {
+  public Container getContainer(char x) {
     int i = getContainerIndex(x);
     if (i < 0) {
       return null;
@@ -672,12 +672,12 @@ public final class RoaringArray implements Cloneable, Externalizable, Appendable
     return this.values[i];
   }
 
-  protected int getContainerIndex(char x) {
+  public int getContainerIndex(char x) {
     int i = this.binarySearch(0, size, x);
     return i;
   }
 
-  protected Container getContainerAtIndex(int i) {
+  public Container getContainerAtIndex(int i) {
     return this.values[i];
   }
 
@@ -764,7 +764,7 @@ public final class RoaringArray implements Cloneable, Externalizable, Appendable
     return this.binarySearch(0, size, x);
   }
 
-  protected char getKeyAtIndex(int i) {
+  public char getKeyAtIndex(int i) {
     return this.keys[i];
   }
 
@@ -965,7 +965,7 @@ public final class RoaringArray implements Cloneable, Externalizable, Appendable
     this.values[i] = c;
   }
 
-  protected int size() {
+  public int size() {
     return this.size;
   }
 

@@ -1059,7 +1059,7 @@ public class RoaringBitmap implements Cloneable, Serializable, Iterable<Integer>
     return answer;
   }
 
-  RoaringArray highLowContainer = null;
+  public RoaringArray highLowContainer = null;
 
   /**
    * Create an empty bitmap
@@ -1072,7 +1072,7 @@ public class RoaringBitmap implements Cloneable, Serializable, Iterable<Integer>
   /**
    * Wrap an existing high low container
    */
-  RoaringBitmap(RoaringArray highLowContainer) {
+  public RoaringBitmap(RoaringArray highLowContainer) {
     this.highLowContainer = highLowContainer;
   }
 
