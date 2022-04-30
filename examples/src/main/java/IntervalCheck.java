@@ -1,5 +1,5 @@
 
-import org.roaringbitmap.RoaringBitmap;
+import org.bitlap.roaringbitmap.RoaringBitmap;
 
 public class IntervalCheck {
 

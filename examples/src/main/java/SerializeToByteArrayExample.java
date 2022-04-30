@@ -4,7 +4,7 @@
 /***************
  * for performance considerations, see https://github.com/RoaringBitmap/RoaringBitmap/issues/319
  **************/
-import org.roaringbitmap.RoaringBitmap;
+import org.bitlap.roaringbitmap.RoaringBitmap;
 import java.io.*;
 import java.nio.*;
 

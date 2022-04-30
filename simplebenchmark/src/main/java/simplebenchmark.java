@@ -4,8 +4,8 @@ import java.net.*;
 import java.text.*;
 import java.util.*;
 import java.util.zip.*;
-import org.roaringbitmap.*;
-import org.roaringbitmap.buffer.*;
+import org.bitlap.roaringbitmap.*;
+import org.bitlap.roaringbitmap.buffer.*;
 
 public class simplebenchmark {
 

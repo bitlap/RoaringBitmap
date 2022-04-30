@@ -34,7 +34,7 @@ subprojects {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    group = "org.roaringbitmap"
+    group = "org.bitlap"
 
     tasks {
         withType<JavaCompile> {
@@ -178,7 +178,8 @@ nexusPublishing {
         sonatype {
             // sonatypeUsername and sonatypePassword properties are used automatically
             // id found via clicking the desired profile in the web ui and noting the url fragment
-            stagingProfileId.set("144dd9b55bb0c2")
+            // stagingProfileId.set("144dd9b55bb0c2")
+            stagingProfileId.set("323e8dbb15d399") // bitlap sonatype url profile id
             nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
             snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
         }

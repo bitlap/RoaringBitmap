@@ -4,7 +4,7 @@
 *
 *
 */
-import org.roaringbitmap.*;
+import org.bitlap.roaringbitmap.*;
 import java.io.*;
 import java.nio.*;
 import java.util.*;

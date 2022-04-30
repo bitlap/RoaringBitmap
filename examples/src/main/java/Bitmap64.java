@@ -1,4 +1,4 @@
-import org.roaringbitmap.longlong.*;
+import org.bitlap.roaringbitmap.longlong.*;
 
 public class Bitmap64 {
 
