@@ -45,7 +45,9 @@ public final class RoaringArray implements Cloneable, Externalizable, Appendable
     this(new char[initialCapacity], new Container[initialCapacity], 0);
   }
 
-
+  /**
+   * create method with keys and containers
+   */
   public RoaringArray(char[] keys, Container[] values, int size) {
     this.keys = keys;
     this.values = values;
@@ -227,6 +229,9 @@ public final class RoaringArray implements Cloneable, Externalizable, Appendable
     return Util.unsignedBinarySearch(keys, begin, end, key);
   }
 
+  /**
+   * clear
+   */
   public void clear() {
     this.keys = null;
     this.values = null;
@@ -663,7 +668,9 @@ public final class RoaringArray implements Cloneable, Externalizable, Appendable
     }
   }
 
-  // involves a binary search
+  /**
+   * involves a binary search
+   */
   public Container getContainer(char x) {
     int i = getContainerIndex(x);
     if (i < 0) {
