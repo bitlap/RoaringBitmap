@@ -1,3 +1,8 @@
+| Maven Central    |     Discord  | 中文说明                                 |
+| ---------------- | ------------------ |--------------------------------------|
+| [![Maven Central][Badge-Maven]][Link-Maven] | [![Discord][Badge-Discord]][Link-Discord] | [README.zh-CN.md](./README.zh-CN.md) |
+
+
 RoaringBitmap
 =============
 [![](https://jitpack.io/v/RoaringBitmap/RoaringBitmap.svg)](https://jitpack.io/#RoaringBitmap/RoaringBitmap)
@@ -531,3 +536,8 @@ This work was supported by NSERC grant number 26143.
 
 [docs-badge]:https://img.shields.io/badge/API-docs-blue.svg?style=flat-square
 [docs]:http://www.javadoc.io/doc/org.roaringbitmap/RoaringBitmap/
+
+[Badge-Maven]: https://img.shields.io/maven-central/v/org.bitlap/RoaringBitmap
+[Link-Maven]: https://search.maven.org/search?q=g:%22org.bitlap%22%20AND%20a:%22RoaringBitmap%22
+[Badge-Discord]: https://img.shields.io/discord/968687999862841384
+[Link-Discord]: https://discord.com/invite/vp5stpz6eU
