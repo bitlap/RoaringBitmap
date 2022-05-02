@@ -1,6 +1,6 @@
-| Maven Central    |     Discord  | 中文说明                                 |
-| ---------------- | ------------------ |--------------------------------------|
-| [![Maven Central][Badge-Maven]][Link-Maven] | [![Discord][Badge-Discord]][Link-Discord] | [README.zh-CN.md](./README.zh-CN.md) |
+| Maven Central for Bitlap                    | Discord                                   | 中文说明                                  |
+|---------------------------------------------|-------------------------------------------|---------------------------------------|
+| [![Maven Central][Badge-Maven]][Link-Maven] | [![Discord][Badge-Discord]][Link-Discord] | [README.zh-CN.md](./README.zh-CN.md)  |
 
 
 RoaringBitmap
