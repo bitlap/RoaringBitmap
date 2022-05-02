@@ -11,6 +11,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
+import static org.bitlap.roaringbitmap.SeededTestData.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 @Execution(ExecutionMode.CONCURRENT)
@@ -156,15 +157,15 @@ public class TestUtil {
 
     public static Stream<Arguments> sets() {
         return Stream.of(
-                Arguments.of(SeededTestData.rleRegion().toArray(), SeededTestData.rleRegion().toArray()),
-                Arguments.of(SeededTestData.denseRegion().toArray(), SeededTestData.rleRegion().toArray()),
-                Arguments.of(SeededTestData.sparseRegion().toArray(), SeededTestData.rleRegion().toArray()),
-                Arguments.of(SeededTestData.rleRegion().toArray(), SeededTestData.denseRegion().toArray()),
-                Arguments.of(SeededTestData.denseRegion().toArray(), SeededTestData.denseRegion().toArray()),
-                Arguments.of(SeededTestData.sparseRegion().toArray(), SeededTestData.denseRegion().toArray()),
-                Arguments.of(SeededTestData.rleRegion().toArray(), SeededTestData.sparseRegion().toArray()),
-                Arguments.of(SeededTestData.denseRegion().toArray(), SeededTestData.sparseRegion().toArray()),
-                Arguments.of(SeededTestData.sparseRegion().toArray(), SeededTestData.sparseRegion().toArray())
+                Arguments.of(rleRegion().toArray(), rleRegion().toArray()),
+                Arguments.of(denseRegion().toArray(), rleRegion().toArray()),
+                Arguments.of(sparseRegion().toArray(), rleRegion().toArray()),
+                Arguments.of(rleRegion().toArray(), denseRegion().toArray()),
+                Arguments.of(denseRegion().toArray(), denseRegion().toArray()),
+                Arguments.of(sparseRegion().toArray(), denseRegion().toArray()),
+                Arguments.of(rleRegion().toArray(), sparseRegion().toArray()),
+                Arguments.of(denseRegion().toArray(), sparseRegion().toArray()),
+                Arguments.of(sparseRegion().toArray(), sparseRegion().toArray())
         );
     }
 

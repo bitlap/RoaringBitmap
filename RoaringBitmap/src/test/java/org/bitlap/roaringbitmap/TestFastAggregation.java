@@ -11,6 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
+import static org.bitlap.roaringbitmap.SeededTestData.TestDataSet.testCase;
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -188,54 +189,54 @@ public class TestFastAggregation {
     public static Stream<Arguments> bitmaps() {
         return Stream.of(
                 Arguments.of(Arrays.asList(
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withArrayAt(1).withRunAt(2).build(),
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withArrayAt(1).withRunAt(2).build(),
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withArrayAt(1).withRunAt(2).build()
+                        testCase().withBitmapAt(0).withArrayAt(1).withRunAt(2).build(),
+                        testCase().withBitmapAt(0).withArrayAt(1).withRunAt(2).build(),
+                        testCase().withBitmapAt(0).withArrayAt(1).withRunAt(2).build()
                 )),
                 Arguments.of(Arrays.asList(
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withRunAt(1).withArrayAt(2).build(),
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withRunAt(1).withArrayAt(2).build(),
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withRunAt(1).withArrayAt(2).build()
+                        testCase().withBitmapAt(0).withRunAt(1).withArrayAt(2).build(),
+                        testCase().withBitmapAt(0).withRunAt(1).withArrayAt(2).build(),
+                        testCase().withBitmapAt(0).withRunAt(1).withArrayAt(2).build()
                 )),
                 Arguments.of(Arrays.asList(
-                        SeededTestData.TestDataSet.testCase().withArrayAt(0).withRunAt(1).withBitmapAt(2).build(),
-                        SeededTestData.TestDataSet.testCase().withArrayAt(0).withRunAt(1).withBitmapAt(2).build(),
-                        SeededTestData.TestDataSet.testCase().withArrayAt(0).withRunAt(1).withBitmapAt(2).build()
+                        testCase().withArrayAt(0).withRunAt(1).withBitmapAt(2).build(),
+                        testCase().withArrayAt(0).withRunAt(1).withBitmapAt(2).build(),
+                        testCase().withArrayAt(0).withRunAt(1).withBitmapAt(2).build()
                 )),
                 Arguments.of(Arrays.asList(
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withArrayAt(1).withRunAt(2).build(),
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withArrayAt(3).withRunAt(4).build(),
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withArrayAt(1).withRunAt(2).build()
+                        testCase().withBitmapAt(0).withArrayAt(1).withRunAt(2).build(),
+                        testCase().withBitmapAt(0).withArrayAt(3).withRunAt(4).build(),
+                        testCase().withBitmapAt(0).withArrayAt(1).withRunAt(2).build()
                 )),
                 Arguments.of(Arrays.asList(
-                        SeededTestData.TestDataSet.testCase().withArrayAt(0).withBitmapAt(1).withRunAt(2).build(),
-                        SeededTestData.TestDataSet.testCase().withRunAt(0).withArrayAt(1).withBitmapAt(2).build(),
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withRunAt(1).withArrayAt(2).build()
+                        testCase().withArrayAt(0).withBitmapAt(1).withRunAt(2).build(),
+                        testCase().withRunAt(0).withArrayAt(1).withBitmapAt(2).build(),
+                        testCase().withBitmapAt(0).withRunAt(1).withArrayAt(2).build()
                 )),
                 Arguments.of(Arrays.asList(
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withArrayAt(1).withRunAt(2).build(),
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withArrayAt(2).withRunAt(4).build(),
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withArrayAt(1).withRunAt(2).build()
+                        testCase().withBitmapAt(0).withArrayAt(1).withRunAt(2).build(),
+                        testCase().withBitmapAt(0).withArrayAt(2).withRunAt(4).build(),
+                        testCase().withBitmapAt(0).withArrayAt(1).withRunAt(2).build()
                 )),
                 Arguments.of(Arrays.asList(
-                        SeededTestData.TestDataSet.testCase().withArrayAt(0).withArrayAt(1).withArrayAt(2).build(),
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withBitmapAt(2).withBitmapAt(4).build(),
-                        SeededTestData.TestDataSet.testCase().withRunAt(0).withRunAt(1).withRunAt(2).build()
+                        testCase().withArrayAt(0).withArrayAt(1).withArrayAt(2).build(),
+                        testCase().withBitmapAt(0).withBitmapAt(2).withBitmapAt(4).build(),
+                        testCase().withRunAt(0).withRunAt(1).withRunAt(2).build()
                 )),
                 Arguments.of(Arrays.asList(
-                        SeededTestData.TestDataSet.testCase().withArrayAt(0).withArrayAt(1).withArrayAt(2).build(),
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withBitmapAt(2).withArrayAt(4).build(),
-                        SeededTestData.TestDataSet.testCase().withRunAt(0).withRunAt(1).withArrayAt(2).build()
+                        testCase().withArrayAt(0).withArrayAt(1).withArrayAt(2).build(),
+                        testCase().withBitmapAt(0).withBitmapAt(2).withArrayAt(4).build(),
+                        testCase().withRunAt(0).withRunAt(1).withArrayAt(2).build()
                 )),
                 Arguments.of(Arrays.asList(
-                        SeededTestData.TestDataSet.testCase().withArrayAt(0).withArrayAt(1).withBitmapAt(2).build(),
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withBitmapAt(2).withBitmapAt(4).build(),
-                        SeededTestData.TestDataSet.testCase().withRunAt(0).withRunAt(1).withBitmapAt(2).build()
+                        testCase().withArrayAt(0).withArrayAt(1).withBitmapAt(2).build(),
+                        testCase().withBitmapAt(0).withBitmapAt(2).withBitmapAt(4).build(),
+                        testCase().withRunAt(0).withRunAt(1).withBitmapAt(2).build()
                 )),
                 Arguments.of(Arrays.asList(
-                        SeededTestData.TestDataSet.testCase().withArrayAt(20).build(),
-                        SeededTestData.TestDataSet.testCase().withBitmapAt(0).withBitmapAt(1).withBitmapAt(4).build(),
-                        SeededTestData.TestDataSet.testCase().withRunAt(0).withRunAt(1).withBitmapAt(3).build()
+                        testCase().withArrayAt(20).build(),
+                        testCase().withBitmapAt(0).withBitmapAt(1).withBitmapAt(4).build(),
+                        testCase().withRunAt(0).withRunAt(1).withBitmapAt(3).build()
                 ))
         );
     }
