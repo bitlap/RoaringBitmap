@@ -17,7 +17,7 @@ For example, this is a good example:
 ```Java
 import java.io.IOException;
 
-import org.roaringbitmap.RoaringBitmap;
+import org.bitlap.roaringbitmap.RoaringBitmap;
 
 public class Main {
     public static void main(String[] args) throws IOException {

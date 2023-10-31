@@ -6,7 +6,7 @@
 * A standard way is to use Base 64 : https://en.wikipedia.org/wiki/Base64
 *
 */
-import org.roaringbitmap.buffer.*;
+import org.bitlap.roaringbitmap.buffer.*;
 import java.io.*;
 import java.nio.*;
 import java.util.*;

@@ -158,7 +158,7 @@ Code sample
 -------------
 
 ```java        
-import org.roaringbitmap.RoaringBitmap;
+import org.bitlap.roaringbitmap.RoaringBitmap;
 
 public class Basic {
 
@@ -199,7 +199,7 @@ Working with memory-mapped bitmaps
 ---------------------------------------
 
 If you want to have your bitmaps lie in memory-mapped files, you can
-use the org.roaringbitmap.buffer package instead. It contains two
+use the org.bitlap.roaringbitmap.buffer package instead. It contains two
 important classes, ImmutableRoaringBitmap and MutableRoaringBitmap.
 MutableRoaringBitmaps are derived from ImmutableRoaringBitmap, so that
 you can convert (cast) a MutableRoaringBitmap to an ImmutableRoaringBitmap
@@ -237,7 +237,7 @@ from a ByteBuffer. In such instances, the constructor only loads the meta-data
 in RAM while the actual data is accessed from the ByteBuffer on demand.
 
 ```java
-        import org.roaringbitmap.buffer.*;
+        import org.bitlap.roaringbitmap.buffer.*;
 
         //...
 
@@ -269,7 +269,7 @@ This design was inspired by Druid.
 One can find a complete working example in the test file TestMemoryMapping.java.
 
 Note that you should not mix the classes from the org.roaringbitmap package with the classes
-from the org.roaringbitmap.buffer package. They are incompatible. They serialize
+from the org.bitlap.roaringbitmap.buffer package. They are incompatible. They serialize
 to the same output however. The performance of the code in org.roaringbitmap package is
 generally superior because there is no overhead due to the use of ByteBuffer instances.
 
@@ -322,7 +322,7 @@ The newer `Roaring64Bitmap` approach relies on the ART data structure to hold th
  [The Adaptive Radix Tree: ARTful Indexing for Main-Memory Databases](https://db.in.tum.de/~leis/papers/ART.pdf) by Leis et al. (ICDE '13).
 
 ```java
-    import org.roaringbitmap.longlong.*;
+    import org.bitlap.roaringbitmap.longlong.*;
 
     
     // first Roaring64NavigableMap
@@ -518,7 +518,7 @@ To run JMH benchmarks, use the following command:
 
 You can also run specific benchmarks...
 
-         $ ./jmh/run.sh 'org.roaringbitmap.aggregation.and.identical.*'
+         $ ./jmh/run.sh 'org.bitlap.roaringbitmap.aggregation.and.identical.*'
 
 
 Mailing list/discussion group

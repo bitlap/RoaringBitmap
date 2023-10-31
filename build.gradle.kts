@@ -26,7 +26,7 @@ subprojects {
         mavenCentral()
     }
 
-    group = "org.roaringbitmap"
+    group = "org.bitlap"
 
     tasks {
         withType<JavaCompile> {
