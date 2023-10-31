@@ -5,7 +5,7 @@
 
 
 /**
- * The org.roaringbitmap package  provides
+ * The org.bitlap.roaringbitmap package  provides
  * one class ({@link org.bitlap.roaringbitmap.RoaringBitmap}) that   users
  * can rely upon for fast set of integers.
  * 

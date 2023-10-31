@@ -4,6 +4,12 @@ RoaringBitmap
 [![docs-badge][]][docs]
 ![Java 11 CI](https://github.com/RoaringBitmap/RoaringBitmap/workflows/Java%2011%20CI/badge.svg)
 
+| Maven Central for Bitlap RoaringBitmap                                                                     | 中文说明                      | RoaringBitmapX                                                                                              |
+|------------------------------------------------------------------------------------------------------------|---------------------------|-------------------------------------------------------------------------------------------------------------|
+| [![Maven Central](https://img.shields.io/maven-central/v/org.bitlap/RoaringBitmapX)][bitlap-RoaringBitmap] | [中文说明](./README.zh-CN.md) | [![Maven Central](https://img.shields.io/maven-central/v/org.bitlap/RoaringBitmapX)][bitlap-RoaringBitmapX] |
+
+---
+
 Bitsets, also called bitmaps, are commonly used as fast data structures.
 Unfortunately, they can use too much memory. To compensate, we often use
 compressed bitmaps.
@@ -541,3 +547,6 @@ This work was supported by NSERC grant number 26143.
 
 [docs-badge]:https://img.shields.io/badge/API-docs-blue.svg?style=flat-square
 [docs]:http://www.javadoc.io/doc/org.roaringbitmap/RoaringBitmap/
+
+[bitlap-RoaringBitmap]:https://central.sonatype.com/artifact/org.bitlap/RoaringBitmap
+[bitlap-RoaringBitmapX]:https://central.sonatype.com/artifact/org.bitlap/RoaringBitmapX

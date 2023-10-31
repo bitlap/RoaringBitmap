@@ -54,7 +54,7 @@ subprojects {
     }
 }
 
-subprojects.filter { !listOf("jmh", "fuzz-tests", "examples", "bsi", "simplebenchmark").contains(it.name) }.forEach {
+subprojects.filter { !listOf("jmh", "fuzz-tests", "examples", "bsi", "simplebenchmark", "RoaringBitmapX").contains(it.name) }.forEach {
     it.run {
         apply(plugin = "checkstyle")
 
@@ -76,7 +76,7 @@ subprojects.filter { !listOf("jmh", "fuzz-tests", "examples", "bsi", "simplebenc
     }
 }
 
-subprojects.filter { listOf("RoaringBitmap", "bsi").contains(it.name) }.forEach { project ->
+subprojects.filter { listOf("RoaringBitmap", "bsi", "RoaringBitmapX").contains(it.name) }.forEach { project ->
     project.run {
         apply(plugin = "maven-publish")
         apply(plugin = "signing")
@@ -100,10 +100,10 @@ subprojects.filter { listOf("RoaringBitmap", "bsi").contains(it.name) }.forEach 
                     pom {
                         name.set("${project.group}:${project.name}")
                         description.set("Roaring bitmaps are compressed bitmaps (also called bitsets) which tend to outperform conventional compressed bitmaps such as WAH or Concise.")
-                        url.set("https://github.com/RoaringBitmap/RoaringBitmap")
+                        url.set("https://github.com/bitlap/RoaringBitmap")
                         issueManagement {
                             system.set("GitHub Issue Tracking")
-                            url.set("https://github.com/RoaringBitmap/RoaringBitmap/issues")
+                            url.set("https://github.com/bitlap/RoaringBitmap/issues")
                         }
                         licenses {
                             license {
@@ -173,7 +173,8 @@ nexusPublishing {
         sonatype {
             // sonatypeUsername and sonatypePassword properties are used automatically
             // id found via clicking the desired profile in the web ui and noting the url fragment
-            stagingProfileId.set("144dd9b55bb0c2")
+            // stagingProfileId.set("144dd9b55bb0c2")
+            stagingProfileId.set("323e8dbb15d399") // bitlap sonatype url profile id
             nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
             snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
         }

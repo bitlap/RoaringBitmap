@@ -36,7 +36,8 @@ dependencies {
             "com.googlecode.javaewah:JavaEWAH:1.0.8",
             "io.druid:extendedset:0.12.3",
             "com.zaxxer:SparseBitSet:1.0",
-            "me.lemire.integercompression:JavaFastPFOR:0.1.11"
+            "me.lemire.integercompression:JavaFastPFOR:0.1.11",
+            "org.roaringbitmap:RoaringBitmap:1.0.0"
     ).forEach {
         jmh(it)
         testRuntimeOnly(it)

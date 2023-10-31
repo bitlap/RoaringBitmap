@@ -9,7 +9,7 @@
  * two classes ({@link org.bitlap.roaringbitmap.buffer.MutableRoaringBitmap} and
  * ({@link org.bitlap.roaringbitmap.buffer.ImmutableRoaringBitmap}) that   users
  * can rely upon for fast set of integers.
- * It differs from the org.roaringbitmap in that
+ * It differs from the org.bitlap.roaringbitmap in that
  * the backing stores are ByteBuffers. 
  * 
  * Initially, one wants to construct a bitmap using
